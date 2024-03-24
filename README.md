@@ -11,8 +11,8 @@
 - Neovim >= **0.9.0**
 - [LazyVim](https://www.lazyvim.org/)
 - a [Nerd Font](https://www.nerdfonts.com/)(v3.0 or greater)
-- for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [Solarized Osaka](https://github.com/craftzdog/solarized-osaka.nvim)
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [Solarized Osaka by craftzdog](https://github.com/craftzdog/solarized-osaka.nvim)
 - ...
 
 ## PowerShell setup (Windows)
