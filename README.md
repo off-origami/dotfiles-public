@@ -60,7 +60,7 @@ docker-compose --version
 ```
 
 ### Limit resources
-1. Enter the user's folder: C:\Users\%USERPROFILE%
+1. Enter the user's folder: C:\Users\\%USERPROFILE%
 2. Create the file: .wslconfig
 3. Enter the following:
 ```properties
