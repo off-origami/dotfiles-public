@@ -30,7 +30,7 @@
 ### wsl2
 
 ```powershell
-#by default will be wsl 2 and ubuntu
+#by default will be wsl2 and ubuntu
 wsl --install
 ```
 
