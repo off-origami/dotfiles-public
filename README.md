@@ -1,7 +1,5 @@
 # off-origami's dotfiles
 
-wget https://github.com/jesseduffield/lazygit/releases/download/v0.41.0/lazygit_v0.41.0_Linux_x86_64.tar.gz
-
 ## Contents
 
 - Neovim config
