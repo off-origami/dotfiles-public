@@ -4,7 +4,7 @@
 
 - Neovim config
 - PowerShell setup (Windows)
-- Docker setup (Windows)
+- Docker setup (WSL2)
 
 ## Neovim config
 
@@ -25,7 +25,7 @@
 - [z](https://www.powershellgallery.com/packages/z) - Directory jumper
 - [PSFzf](https://github.com/kelleyma49/PSFzf) - Fuzzy finder
 
-## Docker setup (Windows)
+## Docker setup (WSL2)
 
 ### wsl2
 
