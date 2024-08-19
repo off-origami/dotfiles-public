@@ -74,14 +74,20 @@ keymap.set("n", "dw", 'vb"_d', { noremap = true, silent = true, desc = "Delete w
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G", { noremap = true, silent = true, desc = "Select all text" })
 
+-- increment/decrement numbers
+keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
+keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
+
 -- New tab
 keymap.set("n", "te", ":tabedit<CR>", { noremap = true, silent = true, desc = "Open new tab" })
 keymap.set("n", "<tab>", ":tabnext<CR>", { noremap = true, silent = true, desc = "Go to next tab" })
 keymap.set("n", "<s-tab>", ":tabprev<CR>", { noremap = true, silent = true, desc = "Go to previous tab" })
+keymap.set("n", "tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
 
 -- Split window
-keymap.set("n", "sh", "<C-w>s", { noremap = true, silent = true, desc = "Split window horizontally" })
+keymap.set("n", "ss", "<C-w>s", { noremap = true, silent = true, desc = "Split window horizontally" })
 keymap.set("n", "sv", ":vsplit<CR>", { noremap = true, silent = true, desc = "Split window vertically" })
+keymap.set("n", "sx", "<cmd>close<CR>", { desc = "Close current split" })
 
 -- Move focus between windows
 keymap.set("n", "sh", "<C-w>h", { noremap = true, silent = true, desc = "Move focus to left window" })
