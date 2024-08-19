@@ -6,14 +6,65 @@
 - PowerShell setup (Windows)
 - Docker setup (WSL2)
 
-## Neovim config
+## Neovim (Setup on Debian with nix package manager + config) 
 
-- Neovim >= **0.9.0**
-- [LazyVim](https://www.lazyvim.org/)
-- a [Nerd Font](https://www.nerdfonts.com/)(v3.0 or greater)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [Solarized Osaka by craftzdog](https://github.com/craftzdog/solarized-osaka.nvim)
-- ...
+### Install Nix
+```bash
+curl -L https://nixos.org/nix/install | sh
+```
+restart your terminal
+#### To solve problems with locales (following this: https://nixos.wiki/wiki/Locales)
+```bash
+nix-env -iA nixpkgs.glibcLocales
+
+# in your .zshenv (zsh) or .profile (bash)
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+
+# in ~
+vim shell.nix
+
+# inside shell.nix
+with import <nixpkgs> {};  
+pkgs.mkShell {
+  LOCALE_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
+  # You can also include other build inputs as needed
+  buildInputs = [ hello ];
+
+nix-shell
+```
+
+### Install Neovim using Nix
+```bash
+nix-env -iA nixpkgs.neovim
+nvim --version
+nix-env -iA nixpkgs.gcc
+nix-env -iA nixpkgs.ripgrep
+nix-env -iA nixpkgs.fd
+git --version
+
+# Nerd Font
+curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
+unzip FiraCode.zip -d ~/.local/share/fonts
+fc-cache -fv
+
+# lazyvim
+mv ~/.config/nvim{,.bak}
+mv ~/.local/share/nvim{,.bak}  # Optional
+mv ~/.local/state/nvim{,.bak}  # Optional
+mv ~/.cache/nvim{,.bak}        # Optional
+
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+nvim
+
+# inside nvim
+:checkhealth
+
+# Installing a Clipboard Tool
+nix-env -iA nixpkgs.xsel
+```
+The rest in my dotfiles.
 
 ## PowerShell setup (Windows)
 
