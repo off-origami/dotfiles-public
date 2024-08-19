@@ -106,3 +106,9 @@ keymap.set("n", "<leader>ts", function()
     print("Spell checking enabled")
   end
 end, { noremap = true, silent = true, desc = "Toggle spelling" })
+
+-- Toggle line wrapping
+keymap.set("n", "<leader>wr", function()
+  vim.opt.wrap = not vim.opt.wrap:get()
+  print("Line wrap: " .. (vim.opt.wrap:get() and "on" or "off"))
+end, { noremap = true, silent = true, desc = "Toggle line wrap" })
