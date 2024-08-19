@@ -94,3 +94,15 @@ keymap.set("n", "<C-w><left>", "<C-w><", { noremap = true, silent = true, desc =
 keymap.set("n", "<C-w><right>", "<C-w>>", { noremap = true, silent = true, desc = "Increase window width" })
 keymap.set("n", "<C-w><up>", "<C-w>+", { noremap = true, silent = true, desc = "Increase window height" })
 keymap.set("n", "<C-w><down>", "<C-w>-", { noremap = true, silent = true, desc = "Decrease window height" })
+
+-- Toggle spelling
+keymap.set("n", "<leader>ts", function()
+  if vim.opt.spell:get() then
+    vim.opt.spell = false
+    print("Spell checking disabled")
+  else
+    vim.opt.spelllang = "en_us"
+    vim.opt.spell = true
+    print("Spell checking enabled")
+  end
+end, { noremap = true, silent = true, desc = "Toggle spelling" })
