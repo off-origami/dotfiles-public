@@ -26,7 +26,7 @@ config = {
 	background = {
 		{
 			source = {
-				File = "wallpaper/wallpaperflare.com_wallpaper.jpg",
+				File = "wallpaper/wallpaper.jpg",
 			},
 			hsb = {
 				hue = 1.0,
