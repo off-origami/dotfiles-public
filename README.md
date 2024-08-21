@@ -11,8 +11,10 @@
 ### Install Nix
 ```bash
 curl -L https://nixos.org/nix/install | sh
-```
+
 restart your terminal
+```
+
 #### To solve problems with locales (following this: https://nixos.wiki/wiki/Locales)
 ```bash
 nix-env -iA nixpkgs.glibcLocales
