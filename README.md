@@ -2,7 +2,7 @@
 
 ## Contents
 
-- Neovim config
+- Neovim (Setup on Debian with nix package manager + config) 
 - PowerShell setup (Windows)
 - Docker setup (WSL2)
 
