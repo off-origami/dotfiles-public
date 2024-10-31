@@ -128,3 +128,7 @@ wsl --shutdown
 wsl
 ```
 5. Monitor resource usage from time to time and if needed adjust .wslconfig
+```wsl
+free -h   # To check memory allocation
+lscpu     # To check the number of CPU cores assigned
+```
